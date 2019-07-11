@@ -145,3 +145,34 @@ for sale in sales:
 # print(total_sales)
 # print(thread_sold)
 
+
+thread_sold_split = []
+
+for thread in thread_sold:
+    if '&' not in thread:
+        thread_sold_split.append(thread)
+    else:
+        thread_sold_split += thread.split('&')
+
+
+# print(thread_sold_split)
+
+def color_count(color):
+    return thread_sold_split.count(color)
+
+
+# print(color_count('white'))
+
+colors = ['red', 'yellow', 'green', 'white', 'black', 'blue', 'purple']
+
+empty_list = []
+for color in thread_sold_split:
+    if color not in empty_list:
+        print("Thread Shed sold {} threads of {} thread today.".format(color_count(color), color))
+        empty_list.append(color)
+
+# print(empty_list)
+
+
+
+
